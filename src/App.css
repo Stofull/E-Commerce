@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+.titlebg {
+  background: url(https://static01.nyt.com/images/2021/03/30/multimedia/28xp-shoes-09/28xp-shoes-09-superJumbo.jpg)
+    center center / cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  object-fit: cover;
+}
