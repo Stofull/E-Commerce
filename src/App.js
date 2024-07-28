@@ -1,3 +1,4 @@
+import "./styles/modal.css";
 import React from "react";
 import Navbar from "./components/Navbar";
 import TitleSection from "./components/TitleSection";
@@ -10,7 +11,7 @@ function App() {
       <Navbar />
       <div className="flex-grow">
         <TitleSection />
-        <div className="h-16 bg-black"></div>
+        {/* <div className="h-16 bg-black"></div> */}
         <CarouselSection />
       </div>
       <Footer />

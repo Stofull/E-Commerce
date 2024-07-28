@@ -1,83 +1,54 @@
-import { AnimatePresence, motion } from "framer-motion";
-import React, { useState } from "react";
-import Image from "next/image";
-import img1 from './img/image1.jpg';
-import img2 from './img/image2.jpg';
-import img3 from './img/image3.jpg';
-
-const images = [
-  img1,
-  img2,
-  img3,
-];
+import React, { useState, useEffect } from "react";
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
 const CarouselSection = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [showOverlay, setShowOverlay] = useState(false);
+  const images = [
+    "https://media.wired.com/photos/63728604691ed08cc4b98976/16:9/w_2095,h_1178,c_limit/Nike-Swoosh-News-Gear.jpg",
+    "https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(19).webp",
+    "https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(35).webp",
+    "https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(40).webp",
+  ];
 
-  const handlePrev = () => {
-    setCurrentSlide((prevSlide) => (prevSlide - 1 + images.length) % images.length);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000); // Change slide every 3 seconds
+    return () => clearInterval(interval);
+  }, [images.length]);
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
   };
 
-  const handleNext = () => {
-    setCurrentSlide((prevSlide) => (prevSlide + 1) % images.length);
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
   return (
-    <div className="relative w-full overflow-hidden">
-      <motion.div
-        className="relative flex transition-transform duration-500"
-        style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+    <div className="carousel-container">
+      <div
+        className="carousel-inner"
+        style={{ transform: `translateX(-${currentIndex * 33.33}%)` }}
       >
-        {images.map((image, index) => (
-          <motion.div
-            key={index}
-            className="min-w-full h-64 md:h-96 flex-shrink-0 flex items-center justify-center relative overflow-hidden"
-            onHoverStart={() => setShowOverlay(true)}
-            onHoverEnd={() => setShowOverlay(false)}
-          >
-            <AnimatePresence>
-              {showOverlay && (
-                <motion.div
-                  className="absolute left-0 top-0 bottom-0 right-0 z-10 flex justify-center items-center"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                >
-                  <div className="absolute bg-black pointer-events-none opacity-50 h-full w-full" />
-                  <motion.h1
-                    className="bg-white font-semibold text-sm z-10 px-3 py-2 rounded-full flex items-center gap-[0.5ch] hover:opacity-75"
-                    initial={{ y: 10 }}
-                    animate={{ y: 0 }}
-                    exit={{ y: 10 }}
-                  >
-                    <span>Explore Now</span>
-                    <Image src="/arrow.svg" alt="Arrow" width={16} height={16} />
-                  </motion.h1>
-                </motion.div>
-              )}
-            </AnimatePresence>
-            <Image
+        {images.concat(images.slice(0, 2)).map((image, index) => (
+          <div key={index} className="carousel-item">
+            <img
               src={image}
-              alt={`Slide ${index + 1}`}
-              layout="fill"
-              style={{ objectFit: "cover" }}
+              alt={`Slide ${index}`}
+              className="w-full h-full object-cover"
             />
-          </motion.div>
+          </div>
         ))}
-      </motion.div>
-      
-      <button
-        className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full opacity-75 hover:opacity-100 transition-opacity duration-200"
-        onClick={handlePrev}
-      >
-        &#10094;
+      </div>
+      <button onClick={prevSlide} className="carousel-button left">
+        <FaArrowLeft />
       </button>
-      <button
-        className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full opacity-75 hover:opacity-100 transition-opacity duration-200"
-        onClick={handleNext}
-      >
-        &#10095;
+      <button onClick={nextSlide} className="carousel-button right">
+        <FaArrowRight />
       </button>
     </div>
   );

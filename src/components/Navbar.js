@@ -31,7 +31,7 @@ const Navbar = () => {
                   Catalog
                 </Link>
                 <Link
-                  to="#"
+                  to="/News"
                   className="text-gray-300 nav-item py-2 rounded-md text-sm font-medium"
                 >
                   News
