@@ -1,9 +1,8 @@
 .carousel-container {
-  position: relative;
   width: 100%;
-  height: 300px; /* Уменьшенная высота карусели */
+  height: 422px;
+  position: relative;
   overflow: hidden;
-  margin: 20px 0; /* Отступы сверху и снизу */
 }
 
 .carousel-inner {

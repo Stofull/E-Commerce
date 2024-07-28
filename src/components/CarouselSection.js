@@ -3,10 +3,10 @@ import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
 const CarouselSection = () => {
   const images = [
-    "https://media.wired.com/photos/63728604691ed08cc4b98976/16:9/w_2095,h_1178,c_limit/Nike-Swoosh-News-Gear.jpg",
-    "https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(19).webp",
-    "https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(35).webp",
-    "https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(40).webp",
+    { src: "https://i.imgur.com/Z62QZJS.jpeg", buttonText: "Learn More"},
+    { src: "https://i.imgur.com/5v3PaA3.jpeg", buttonText: "Discover" },
+    { src: "https://i.imgur.com/mhDhyp8.jpeg", buttonText: "Shop Now" },
+    { src: "https://i.imgur.com/GsLgtOA.jpeg", buttonText: "See More" },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -37,10 +37,14 @@ const CarouselSection = () => {
         {images.concat(images.slice(0, 2)).map((image, index) => (
           <div key={index} className="carousel-item">
             <img
-              src={image}
+              src={image.src}
               alt={`Slide ${index}`}
               className="w-full h-full object-cover"
             />
+            <div className="carousel-caption">
+              <h3>{image.caption}</h3>
+              <button className="carousel-button">{image.buttonText}</button>
+            </div>
           </div>
         ))}
       </div>

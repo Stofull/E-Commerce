@@ -1,10 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-{
-  /*TODO
-  Изменить цвет и визуализировать его
-  */
-}
+
 const Navbar = () => {
   return (
     <nav className="bg-black sticky top-0 z-50">
