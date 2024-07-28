@@ -1,8 +1,8 @@
-import React from 'react';
-import Navbar from './components/Navbar';
-import TitleSection from './components/TitleSection';
-import CarouselSection from './components/CarouselSection';
-import Footer from './components/Footer';
+import React from "react";
+import Navbar from "./components/Navbar";
+import TitleSection from "./components/TitleSection";
+import CarouselSection from "./components/CarouselSection";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -10,6 +10,7 @@ function App() {
       <Navbar />
       <div className="flex-grow">
         <TitleSection />
+        <div className="h-16 bg-black"></div>
         <CarouselSection />
       </div>
       <Footer />
@@ -18,4 +19,3 @@ function App() {
 }
 
 export default App;
-

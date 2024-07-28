@@ -1,6 +1,9 @@
 import React from "react";
 import Navbar from "./Navbar";
 
+{/*TODO 
+  Дописать кнопку регистрации в логине или сделать модальный способ регистрации и авторизации
+  */}
 const Login = () => {
   return (
     <>

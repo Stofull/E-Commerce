@@ -46,3 +46,12 @@
   height: 100vh;
   object-fit: cover;
 }
+
+.carousel-item {
+  height: auto;
+  width: 100%;
+}
+
+.carousel-item img {
+  width: 100%;
+}
