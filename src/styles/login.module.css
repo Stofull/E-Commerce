@@ -73,7 +73,7 @@
   }
   
   .form button {
-    background-color: #02a152;
+    background-color: #a10202;
     color: white;
     border: none;
     cursor: pointer;
@@ -81,7 +81,7 @@
   }
   
   .form button:hover {
-    background-color: #45a049;
+    background-color: #a04545;
   }
   
   a {
