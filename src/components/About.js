@@ -1,7 +1,6 @@
 import React from 'react';
 import Navbar from './Navbar';
 import '../styles/about.css';
-import { useState } from 'react';
 
 const About = () => {
   return (

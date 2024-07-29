@@ -1,18 +1,54 @@
 import React from 'react';
-{/*
-  TODO
-Дописать до конца футер увеличить его в размере, и приписать их к другим страница
-  */
-}
+import '../styles/footer.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTwitter, faInstagram, faYoutube, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
-const Footer = () => {
+function Footer() {
   return (
-    <footer className="bg-black text-white py-4">
-      <div className="container mx-auto text-center">
-        &copy; 2024 E-commerce. All rights reserved.
+    <footer className="footer">
+      <div className="footer-left">
+        <h6>Follow us</h6>
+        <div className="social-icons">
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faTwitter} />
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faInstagram} />
+          </a>
+          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faYoutube} />
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faLinkedin} />
+          </a>
+        </div>
+      </div>
+      <div className="footer-section">
+        <h6>Use cases</h6>
+        <ul>
+          <li>UI design</li>
+          <li>UX design</li>
+          <li>Wireframing</li>
+        </ul>
+      </div>
+      <div className="footer-section">
+        <h6>Explore</h6>
+        <ul>
+          <li>Design</li>
+          <li>Prototyping</li>
+          <li>Development features</li>
+        </ul>
+      </div>
+      <div className="footer-section">
+        <h6>Resources</h6>
+        <ul>
+          <li>Blog</li>
+          <li>Best practices</li>
+          <li>Colors</li>
+        </ul>
       </div>
     </footer>
   );
-};
+}
 
 export default Footer;
