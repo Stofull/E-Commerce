@@ -21,19 +21,19 @@ const Navbar = () => {
                   Home
                 </Link>
                 <Link
-                  to="#"
+                  to="/Catalog"
                   className="text-gray-300 py-2 rounded-md text-sm font-medium nav-item"
                 >
                   Catalog
                 </Link>
                 <Link
-                  to="/News"
+                  to="#"
                   className="text-gray-300 nav-item py-2 rounded-md text-sm font-medium"
                 >
                   News
                 </Link>
                 <Link
-                  to="#"
+                  to="/About"
                   className="text-gray-300 nav-item py-2 rounded-md text-sm font-medium"
                 >
                   About

@@ -1,6 +1,7 @@
 import App from "./App";
+import About from "./components/About";
 import Login from "./components/Login";
-import News from "./components/News";
+import Catalog from "./components/Catalog";
 
 const routes = [
   {
@@ -12,8 +13,13 @@ const routes = [
     element: <Login />,
   },
   {
-    path: "/News",
-    element: <News />,
+path:"/About",
+element: <About />,
+
+  },
+  {
+    path: "/Catalog",
+    element: <Catalog />,
   },
 ];
 

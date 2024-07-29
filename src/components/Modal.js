@@ -20,13 +20,13 @@ const Modal = ({ children, onClose }) => {
     <motion.div 
       className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center"
       variants={backdrop}
-      initial="hidden"
+        initial="hidden"
       animate="visible"
       exit="hidden"
       onClick={onClose}
     >
       <motion.div 
-        className="bg-white rounded-lg overflow-hidden"
+        className="bg-white rounded-lg overflow-hidden max-w-lg w-full"
         variants={modal}
         onClick={(e) => e.stopPropagation()}
       >
