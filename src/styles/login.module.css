@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url(https://static01.nyt.com/images/2021/03/30/multimedia/28xp-shoes-09/28xp-shoes-09-superJumbo.jpg)
+    background: url(https://i.imgur.com/kzx2arL.jpeg)
     center center / cover no-repeat;
     background-size: cover;
   }
@@ -73,7 +73,7 @@
   }
   
   .form button {
-    background-color: #a10202;
+    background-color: #64a102;
     color: white;
     border: none;
     cursor: pointer;
@@ -81,7 +81,7 @@
   }
   
   .form button:hover {
-    background-color: #a04545;
+    background-color: #54a045;
   }
   
   a {

@@ -102,12 +102,17 @@ const Catalog = () => {
                   <p className="text-gray-700 mb-4">
                     {article.content.substring(0, 100)}...
                   </p>
-                  <button
-                    onClick={() => openModal(article)}
-                    className="bg-blue-500 text-white px-4 py-2 rounded"
-                  >
-                    Read More
-                  </button>
+                  <div className="flex justify-between">
+                    <button className="bg-green-600 active:bg-green-300 text-white px-4 py-2 rounded">
+                      Buy now
+                    </button>
+                    <button
+                      onClick={() => openModal(article)}
+                      className="bg-blue-500 text-white px-4 py-2 rounded"
+                    >
+                      Read More
+                    </button>
+                  </div>
                 </div>
               </div>
             ))}

@@ -38,6 +38,7 @@ const Navbar = () => {
                 >
                   About
                 </Link>
+                
               </div>
             </div>
           </div>
