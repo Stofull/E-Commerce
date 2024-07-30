@@ -6,9 +6,9 @@ import CarouselSection from "./components/CarouselSection";
 import Footer from "./components/Footer";
 import GradientSeparator from "./components/GradientSeperator";
 
-import { emojiCursor,rainbowCursor } from "cursor-effects";
+// import { emojiCursor,rainbowCursor } from "cursor-effects";
 
-new rainbowCursor();
+// new rainbowCursor();
 
 function App() {
   return (

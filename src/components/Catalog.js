@@ -4,6 +4,7 @@ import Modal from "./Modal";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Sidebar from "./Sidebar";
+
 const Catalog = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [currentArticle, setCurrentArticle] = useState(null);
@@ -74,23 +75,24 @@ const Catalog = () => {
     setModalIsOpen(false);
     setCurrentArticle(null);
   };
+
   return (
     <>
       <Navbar />
       <div className="flex gap-2">
         <Sidebar />
         <div className="container mx-auto p-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="flex flex-wrap gap-4">
             {catalogArticles.map((article, index) => (
               <div
                 key={index}
-                className="bg-white shadow-md rounded-lg p-4 flex flex-col justify-between"
+                className="bg-white shadow-md rounded-lg p-4 flex flex-col justify-between w-[300px]"
               >
                 {article.image && (
                   <img
                     src={article.image}
                     alt={article.title}
-                    className="w-full mb-4 rounded h-[550px]"
+                    className="w-full mb-4 rounded object-cover"
                   />
                 )}
                 <div>
@@ -120,7 +122,7 @@ const Catalog = () => {
                   <img
                     src={currentArticle.image}
                     alt={currentArticle.title}
-                    className="mb-4 max-w-full h-auto rounded max-h-[400px]"
+                    className="mb-4 max-w-full h-auto rounded max-h-[400px] object-contain"
                   />
                 )}
                 <p className="text-gray-700 mb-4 w-11/12">

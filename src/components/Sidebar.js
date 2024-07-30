@@ -17,13 +17,13 @@ function Sidebar() {
         <h6>Label</h6>
         <div className="checkbox-group">
           <label>
-            <input type="checkbox" /> Description
+            <input type="checkbox" /> Spring
           </label>
           <label>
-            <input type="checkbox" /> Description
+            <input type="checkbox" /> Smart
           </label>
           <label>
-            <input type="checkbox" /> Description
+            <input type="checkbox" /> Modern
           </label>
         </div>
       </div>
@@ -37,13 +37,13 @@ function Sidebar() {
         <h6>Color</h6>
         <div className="checkbox-group">
           <label>
-            <input type="checkbox" /> Label
+            <input type="checkbox" /> Black
           </label>
           <label>
-            <input type="checkbox" /> Label
+            <input type="checkbox" /> Orange
           </label>
           <label>
-            <input type="checkbox" /> Label
+            <input type="checkbox" /> Blue
           </label>
         </div>
       </div>
@@ -52,13 +52,13 @@ function Sidebar() {
         <h6>Size</h6>
         <div className="checkbox-group">
           <label>
-            <input type="checkbox" /> Label
+            <input type="checkbox" /> 40
           </label>
           <label>
-            <input type="checkbox" /> Label
+            <input type="checkbox" /> 41
           </label>
           <label>
-            <input type="checkbox" /> Label
+            <input type="checkbox" /> 42
           </label>
         </div>
       </div>

@@ -16,7 +16,7 @@ const Navbar = () => {
               <div className="ml-5 flex space-x-4 gap-5">
                 <Link
                   to="/"
-                  className="text-gray-300 nav-item py-2 rounded-md text-sm font-medium cursor-none"
+                  className="text-gray-300 nav-item py-2 rounded-md text-sm font-medium"
                 >
                   Home
                 </Link>
@@ -27,7 +27,7 @@ const Navbar = () => {
                   Catalog
                 </Link>
                 <Link
-                  to="#"
+                  to="/News"
                   className="text-gray-300 nav-item py-2 rounded-md text-sm font-medium"
                 >
                   News
