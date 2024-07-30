@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import Modal from "./Modal";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
@@ -7,6 +6,7 @@ import Sidebar from "./Sidebar";
 
 const Catalog = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [cartModalIsOpen, setCartModalIsOpen] = useState(false);
   const [currentArticle, setCurrentArticle] = useState(null);
 
   const catalogArticles = [
@@ -76,12 +76,26 @@ const Catalog = () => {
     setCurrentArticle(null);
   };
 
+  const openCartModal = () => {
+    setCartModalIsOpen(true);
+  };
+
+  const closeCartModal = () => {
+    setCartModalIsOpen(false);
+  };
+
   return (
     <>
       <Navbar />
       <div className="flex gap-2">
         <Sidebar />
         <div className="container mx-auto p-4">
+          <button
+            onClick={openCartModal}
+            className="bg-red-500 text-white px-4 py-2 rounded mb-4"
+          >
+            View Cart
+          </button>
           <div className="flex flex-wrap gap-4">
             {catalogArticles.map((article, index) => (
               <div
@@ -108,7 +122,7 @@ const Catalog = () => {
                     </button>
                     <button
                       onClick={() => openModal(article)}
-                      className="bg-blue-500 text-white px-4 py-2 rounded"
+                      className="bg-blue-500 active:bg-blue-300 text-white px-4 py-2 rounded"
                     >
                       Read More
                     </button>
@@ -142,9 +156,41 @@ const Catalog = () => {
               </div>
             </Modal>
           )}
+          {cartModalIsOpen && (
+            <Modal onClose={closeCartModal}>
+              <div className="p-4 flex flex-col items-center">
+                <h2 className="text-2xl font-semibold mb-2">Your Cart</h2>
+                <div className="mb-4 w-full">
+                  <div className="w-full flex justify-between items-center mb-2">
+                    <span>Nike Air Max Dn</span>
+                    <span>$150</span>
+                    <img
+                      src="https://i.imgur.com/06ixbfp.jpeg"
+                      alt="Image 1"
+                      className="mb-4 max-h-[200px] h-auto rounded object-contain"
+                    />
+                  </div>
+                  <div className="w-full flex justify-between items-center mb-2">
+                    <span>Nike Dunk High By You</span>
+                    <span>$250</span>
+                    <img
+                      src="https://i.imgur.com/KuR79SA.jpeg"
+                      alt="Image 1"
+                      className="mb-4 max-h-[200px] h-auto rounded object-contain"
+                    />
+                  </div>
+                </div>
+                <button
+                  onClick={closeCartModal}
+                  className="bg-red-500 text-white w-11/12 py-2 rounded"
+                >
+                  Close
+                </button>
+              </div>
+            </Modal>
+          )}
         </div>
       </div>
-
       <Footer />
     </>
   );

@@ -9,7 +9,7 @@
 }
 .nav-item::before {
   content: "";
-  background: linear-gradient(to right, yellow, red);
+  background: linear-gradient(to right, rgb(0, 153, 255), rgb(25, 0, 255));
   height: 3px;
   width: 100%;
   position: absolute;

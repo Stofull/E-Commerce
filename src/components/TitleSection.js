@@ -5,7 +5,7 @@ const TitleSection = () => {
   return (
     
     <div className="titlebg">
-      <h1 className="bg-clip-text text-transparent bg-gradient-to-r from-blue-300 to-blue-600 text-4xl font-bold mb-4">
+      <h1 className="bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-blue-700 text-4xl font-bold mb-4">
         Welcome to Our E-commerce Site
       </h1>
       <div className="flex space-x-4">
