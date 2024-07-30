@@ -6,22 +6,22 @@ import CarouselSection from "./components/CarouselSection";
 import Footer from "./components/Footer";
 import GradientSeparator from "./components/GradientSeperator";
 
+import { MouseTrail } from "@stichiboi/react-elegant-mouse-trail";
 
-import CursorFollow from "./CursorFollow";
-import "./styles/App.css";
+import { emojiCursor,rainbowCursor } from "cursor-effects";
+new rainbowCursor();
 
 function App() {
   return (
     <div className="flex flex-col min-h-screen">
-      <CursorFollow />
-      <Navbar />
-      <div className="flex-grow">
-        <TitleSection />
-        <GradientSeparator />
-        <CarouselSection />
-        <GradientSeparator />
-      </div>
-      <Footer />
+        <Navbar />
+        <div className="flex-grow">
+          <TitleSection />
+          <GradientSeparator />
+          <CarouselSection />
+          <GradientSeparator />
+        </div>
+        <Footer />
     </div>
   );
 }

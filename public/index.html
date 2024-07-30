@@ -10,6 +10,14 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    
+    <script>
+      // Create
+      let cursorEffect = new ghostCursor();
+      cursorEffect.rainbowCursour({
+        element: document.querySelector("#root"),
+      });
+      // Destroy
+      cursorEffect.destroy();
+    </script>
   </body>
 </html>
