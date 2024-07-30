@@ -6,9 +6,8 @@ import CarouselSection from "./components/CarouselSection";
 import Footer from "./components/Footer";
 import GradientSeparator from "./components/GradientSeperator";
 
-import { MouseTrail } from "@stichiboi/react-elegant-mouse-trail";
-
 import { emojiCursor,rainbowCursor } from "cursor-effects";
+
 new rainbowCursor();
 
 function App() {

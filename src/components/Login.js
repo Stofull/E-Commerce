@@ -26,7 +26,7 @@ const Login = () => {
             </div>
 
             <form className={styles.form}>
-              <input type="email" placeholder="Email" />
+              <input type="email" placeholder="Email"/>
               <input type="password" placeholder="Password" />
               <button type="submit">Sign In</button>
               <a href="#">Forgot Your Password?</a>
